@@ -1,0 +1,27 @@
+﻿@page
+@model IEnumerable<Login.Web.Models.AppUser>
+
+
+@{
+    ViewData["Title"] = "User List";
+}
+
+<h2>User List</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>UserName</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model)
+        {
+            <tr>
+                <td>@user.UserName</td>
+                <td>@user.Email</td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,52 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+body, html {
+    margin: 0;
+    padding: 0;
+}
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+.hide-on-next-page {
+    display: none !important;
+}
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background: url('../phts/login-bg.jpg') center center fixed; /* Arka plan resmi */
+    background-size: cover;
+}
+
+.container {
+    border: 2px solid #ccc;
+    padding: 20px;
+    max-width: 600px; /* Dikdörtgenin maksimum geniþliði */
+    background-color: rgba(255, 255, 255, 0.8); /* Ýçerik bölümünün arka plan rengi (beyaz, %80 opaklýk) */
+}
+
+.resim {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px; /* Resim ile metin arasýndaki boþluðu artýrmak için */
+}
+
+.login-container {
+    border: 2px solid #ccc;
+    padding: 40px; /* Artýrýlan padding ile dikdörtgen daha geniþ olacak */
+    max-width: 800px; /* Dikdörtgenin maksimum geniþliði */
+    background-color: white; /* Ýçerik bölümünün arka plan rengi (beyaz) */
+}

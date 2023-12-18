@@ -1,0 +1,93 @@
+﻿@using static Login.Web.Models.ViewModels.SignUpViewModel
+@section Scripts{
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}
+@{
+    ViewBag.Title = "Giriş Ekranı";
+}
+
+ @model SignUpViewModel
+
+
+<div class="row">
+    <div class="col-md-6 offset-md-3">
+        <h2>Kullanıcı Kayıt Formu</h2>
+
+        @if (!string.IsNullOrEmpty(ViewBag.SuccessMessage))
+        {
+            <div class="alert alert-info" role="alert">
+                @ViewBag.SuccessMessage
+            </div>
+        }
+
+
+        @if (!string.IsNullOrEmpty(ViewBag.ErrorMessage))
+        {
+            <div class="alert alert-danger" role="alert">
+                @ViewBag.ErrorMessage
+            </div>
+        }
+
+        <div asp-validation-summary="ModelOnly" class="alert alert-danger" role="alert">
+
+        </div>
+@*         @if (TempData["SuccessMessage"] != null)
+        {
+            <div class="alert alert-info" role="alert">
+                @TempData["SuccessMessage"]
+            </div>
+        } *@
+
+
+        <form asp-controller="Home" asp-action="SignUp" method="post">
+            <div class="row mb-3">
+                <label for="UserName" class="col-md-4 col-form-label" asp-for="UserName"></label> <div class="col-md-8">
+                    <input asp-for="UserName" class="form-control">
+                    <span class="text-danger" asp-validation-for="UserName"></span>
+                
+                </div>
+            </div>﻿
+
+
+
+            <div class="row mb-3">
+                <label for="Email" class="col-md-4 col-form-label" asp-for="Email"></label> <div class="col-md-8">
+                    <input asp-for="Email" class="form-control">
+                    <span class="text-danger" asp-validation-for="Email"></span>
+
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label for="Password" class="col-md-4 col-form-label" asp-for="Password"></label> <div class="col-md-8">
+                    <input asp-for="Password" class="form-control">
+                    <span class="text-danger" asp-validation-for="Password"></span>
+
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label for="PasswordConfirm" class="col-md-4 col-form-label" asp-for="PasswordConfirm"></label> <div class="col-md-8">
+                    <input asp-for="PasswordConfirm" class="form-control">
+                    <span class="text-danger" asp-validation-for="PasswordConfirm"></span>
+
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-md-8 offset-md-4">
+                    <button type="submit" class="btn btn-primary"> Kayıt Ol </button>
+
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="/js/bootstrap/js/bootstrap.min.js"></script>
+<script src="/lib/jquery/dist/jquery.min.js"></script>
+<script src="/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0"></script>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
